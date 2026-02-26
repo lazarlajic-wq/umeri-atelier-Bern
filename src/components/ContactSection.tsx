@@ -136,9 +136,13 @@ const ContactSection = () => {
                   Öffnungszeiten
                 </h3>
                 <p className="text-muted-foreground text-sm">
-                  Mo – Fr: 09:00 – 18:00
+                  Mo – Mi: 08:00 – 18:00
                   <br />
-                  Sa: 10:00 – 16:00
+                  Do: 08:00 – 18:00
+                  <br />
+                  Fr: 08:00 – 18:00
+                  <br />
+                  Sa: 08:00 – 17:00
                   <br />
                   So: Geschlossen
                 </p>
@@ -155,7 +159,7 @@ const ContactSection = () => {
                   Telefon
                 </h3>
                 <p className="text-muted-foreground text-sm">
-                  [Telefonnummer einfügen]
+                  <a href="tel:+41313114131" className="hover:text-primary transition-colors">031 311 41 31</a>
                 </p>
               </div>
             </div>
