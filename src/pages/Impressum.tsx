@@ -56,7 +56,7 @@ const Impressum = () => (
         <div>
           <h2 className="text-foreground font-display text-xl mb-2">Kontakt</h2>
           <p>
-            Telefon: [Telefonnummer einfügen]
+            Telefon: <a href="tel:+41313114131" className="hover:text-primary transition-colors">031 311 41 31</a>
             <br />
             E-Mail: [E-Mail einfügen]
           </p>

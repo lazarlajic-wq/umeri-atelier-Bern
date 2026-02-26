@@ -50,8 +50,9 @@ const SiteFooter = () => (
           <address className="not-italic text-muted-foreground text-sm space-y-2">
             <p>Marktgasse 32</p>
             <p>3011 Bern, Schweiz</p>
-            <p className="mt-4">[Telefonnummer einfügen]</p>
-            <p>[E-Mail einfügen]</p>
+            <p className="mt-4">
+              <a href="tel:+41313114131" className="hover:text-primary transition-colors">031 311 41 31</a>
+            </p>
           </address>
         </div>
       </div>

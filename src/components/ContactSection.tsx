@@ -159,7 +159,7 @@ const ContactSection = () => {
                   Telefon
                 </h3>
                 <p className="text-muted-foreground text-sm">
-                  [Telefonnummer einfügen]
+                  <a href="tel:+41313114131" className="hover:text-primary transition-colors">031 311 41 31</a>
                 </p>
               </div>
             </div>
