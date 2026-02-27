@@ -179,10 +179,17 @@ const ContactSection = () => {
               </div>
             </div>
 
-            <div className="w-full aspect-video bg-card border border-border rounded-sm flex items-center justify-center">
-              <p className="text-muted-foreground/50 text-sm">
-                Karte wird hier eingebettet
-              </p>
+            <div className="w-full aspect-video rounded-sm overflow-hidden border border-border">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2723.8!2d7.4474!3d46.9480!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478e39b2a6c76c3d%3A0x0!2sMarktgasse+32%2C+3011+Bern!5e0!3m2!1sde!2sch!4v1700000000000"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Umeri Schneiderei – Marktgasse 32, 3011 Bern"
+              />
             </div>
           </motion.div>
         </div>
