@@ -25,7 +25,7 @@ const Navigation = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-background/95 backdrop-blur-md ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-background backdrop-blur-md ${
         scrolled ? "border-b border-border shadow-lg shadow-background/20" : ""
       }`}
     >
