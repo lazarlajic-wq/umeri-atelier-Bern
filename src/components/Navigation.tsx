@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import logoUmeri from "@/assets/logo-umeri.png";
 
 const navLinks = [
   { label: "Start", href: "#start" },
@@ -31,11 +32,8 @@ const Navigation = () => {
       }`}
     >
       <nav className="container mx-auto flex items-center justify-between px-6 py-4">
-        <a
-          href="#start"
-          className="font-display text-xl tracking-[0.3em] text-foreground uppercase"
-        >
-          Umeri
+        <a href="#start" className="flex items-center gap-2">
+          <img src={logoUmeri} alt="Umeri Schneiderei Logo" className="h-10 w-auto" />
         </a>
 
         <ul className="hidden lg:flex items-center gap-8">

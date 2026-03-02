@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Separator } from "@/components/ui/separator";
+import logoUmeri from "@/assets/logo-umeri.png";
 
 const footerLinks = [
   { label: "Leistungen", href: "/#leistungen" },
@@ -15,9 +16,7 @@ const SiteFooter = () => (
     <div className="container mx-auto px-6 py-16">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
         <div>
-          <h3 className="font-display text-2xl text-foreground tracking-[0.3em] uppercase mb-4">
-            Umeri
-          </h3>
+          <img src={logoUmeri} alt="Umeri Schneiderei Logo" className="h-16 w-auto mb-4" />
           <p className="text-muted-foreground text-sm leading-relaxed">
             Premium Schneiderei in Bern für Anzüge, Kleidungsanpassungen und
             Massanfertigungen. Über 30 Jahre Erfahrung und Leidenschaft für
