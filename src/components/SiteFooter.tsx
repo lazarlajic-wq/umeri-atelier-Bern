@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Separator } from "@/components/ui/separator";
+import logoUmeri from "@/assets/logo-umeri.png";
 
 const footerLinks = [
   { label: "Leistungen", href: "/#leistungen" },
