@@ -81,6 +81,18 @@ const SiteFooter = () => (
           </Link>
         </div>
       </div>
+
+      <div className="text-center mt-8 text-muted-foreground/40 text-xs">
+        Made by{" "}
+        <a
+          href="https://blackframe-media.ch"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-primary transition-colors"
+        >
+          Blackframe-Media
+        </a>
+      </div>
     </div>
   </footer>
 );
