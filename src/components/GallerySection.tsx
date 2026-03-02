@@ -53,7 +53,7 @@ const GallerySection = () => (
               <img
                 src={item.src}
                 alt={item.alt}
-                className="w-full aspect-[3/4] object-cover rounded-sm"
+                className={`w-full aspect-[3/4] object-cover rounded-sm ${i === 0 ? "object-top" : ""}`}
                 loading="lazy"
               />
             </div>
