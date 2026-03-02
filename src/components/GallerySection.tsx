@@ -5,10 +5,30 @@ import galleryBeratung from "@/assets/gallery-beratung.png";
 import galleryVermessung from "@/assets/gallery-vermessung.png";
 
 const galleryItems = [
-  { src: gallerySuit, alt: "Massgeschneiderter Zweireiher", text: "Massgeschneiderter Zweireiher – zeitlose Eleganz" },
-  { src: galleryFabrics, alt: "Erlesene Stoffe", text: "Erlesene Stoffe – handverlesen für Sie" },
-  { src: galleryBeratung, alt: "Persönliche Beratung im Atelier", text: "Persönliche Beratung – Ihr Stil, unser Handwerk" },
-  { src: galleryVermessung, alt: "Präzises Vermessen", text: "Präzises Vermessen – die Basis perfekter Passform" },
+  {
+    src: gallerySuit,
+    alt: "Massgeschneiderter Zweireiher",
+    title: "Massarbeit",
+    text: "Zeitlose Eleganz, massgeschneidert für Sie.",
+  },
+  {
+    src: galleryFabrics,
+    alt: "Erlesene Stoffe",
+    title: "Stoffe",
+    text: "Handverlesen aus den besten Webereien Europas.",
+  },
+  {
+    src: galleryBeratung,
+    alt: "Persönliche Beratung im Atelier",
+    title: "Beratung",
+    text: "Ihr Stil, unser Handwerk – persönlich und diskret.",
+  },
+  {
+    src: galleryVermessung,
+    alt: "Präzises Vermessen",
+    title: "Vermessung",
+    text: "Die Basis perfekter Passform, auf den Millimeter.",
+  },
 ];
 
 const GallerySection = () => (
@@ -19,7 +39,7 @@ const GallerySection = () => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="text-center mb-16"
+        className="text-center mb-20"
       >
         <p className="text-primary tracking-[0.3em] uppercase text-xs mb-4">
           Galerie
@@ -29,31 +49,113 @@ const GallerySection = () => (
         </h2>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {galleryItems.map((item, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: i * 0.1 }}
-            className="group relative overflow-hidden rounded-sm"
-          >
-            <div className="aspect-[4/5] overflow-hidden">
-              <img
-                src={item.src}
-                alt={item.alt}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                loading="lazy"
-              />
-            </div>
-            <div className="absolute inset-0 bg-background/0 group-hover:bg-background/40 transition-all duration-500 flex items-end p-6">
-              <p className="text-foreground text-sm tracking-wide opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-2 group-hover:translate-y-0">
-                {item.text}
-              </p>
-            </div>
-          </motion.div>
-        ))}
+      {/* Asymmetric editorial layout */}
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-6">
+        {/* Row 1: Large left + small right */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="md:col-span-7 group"
+        >
+          <div className="overflow-hidden rounded-sm">
+            <img
+              src={galleryItems[0].src}
+              alt={galleryItems[0].alt}
+              className="w-full aspect-[3/4] md:aspect-[4/5] object-cover transition-transform duration-700 group-hover:scale-105"
+              loading="lazy"
+            />
+          </div>
+          <div className="mt-4 flex items-baseline gap-3">
+            <span className="text-primary font-display text-lg tracking-wide">
+              {galleryItems[0].title}
+            </span>
+            <span className="h-px flex-1 bg-border" />
+            <span className="text-muted-foreground text-xs tracking-wide">
+              {galleryItems[0].text}
+            </span>
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="md:col-span-5 group md:mt-16"
+        >
+          <div className="overflow-hidden rounded-sm">
+            <img
+              src={galleryItems[1].src}
+              alt={galleryItems[1].alt}
+              className="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-105"
+              loading="lazy"
+            />
+          </div>
+          <div className="mt-4 flex items-baseline gap-3">
+            <span className="text-primary font-display text-lg tracking-wide">
+              {galleryItems[1].title}
+            </span>
+            <span className="h-px flex-1 bg-border" />
+            <span className="text-muted-foreground text-xs tracking-wide">
+              {galleryItems[1].text}
+            </span>
+          </div>
+        </motion.div>
+
+        {/* Row 2: Small left + large right */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.15 }}
+          className="md:col-span-5 group"
+        >
+          <div className="overflow-hidden rounded-sm">
+            <img
+              src={galleryItems[2].src}
+              alt={galleryItems[2].alt}
+              className="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-105"
+              loading="lazy"
+            />
+          </div>
+          <div className="mt-4 flex items-baseline gap-3">
+            <span className="text-primary font-display text-lg tracking-wide">
+              {galleryItems[2].title}
+            </span>
+            <span className="h-px flex-1 bg-border" />
+            <span className="text-muted-foreground text-xs tracking-wide">
+              {galleryItems[2].text}
+            </span>
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="md:col-span-7 group md:-mt-16"
+        >
+          <div className="overflow-hidden rounded-sm">
+            <img
+              src={galleryItems[3].src}
+              alt={galleryItems[3].alt}
+              className="w-full aspect-[3/4] md:aspect-[4/5] object-cover transition-transform duration-700 group-hover:scale-105"
+              loading="lazy"
+            />
+          </div>
+          <div className="mt-4 flex items-baseline gap-3">
+            <span className="text-primary font-display text-lg tracking-wide">
+              {galleryItems[3].title}
+            </span>
+            <span className="h-px flex-1 bg-border" />
+            <span className="text-muted-foreground text-xs tracking-wide">
+              {galleryItems[3].text}
+            </span>
+          </div>
+        </motion.div>
       </div>
     </div>
   </section>
