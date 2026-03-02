@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import aboutImage from "@/assets/about-workshop.jpg";
+import aboutImage from "@/assets/about-jack.png";
 
 const AboutSection = () => (
   <section id="ueber-uns" className="py-24 md:py-32">
@@ -14,16 +14,13 @@ const AboutSection = () => (
           <div className="relative">
             <img
               src={aboutImage}
-              alt="Umeri Schneiderei Werkstatt in Bern"
+              alt="Jack The Tailor – Umeri Schneiderei Bern"
               className="w-full aspect-[4/5] object-cover rounded-sm"
               loading="lazy"
             />
             <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground px-6 py-4 rounded-sm">
-              <span className="font-display text-3xl block font-light">
-                30+
-              </span>
-              <span className="text-xs tracking-[0.2em] uppercase">
-                Jahre Erfahrung
+              <span className="font-display text-xl block font-light tracking-wide">
+                Jack The Tailor
               </span>
             </div>
           </div>
