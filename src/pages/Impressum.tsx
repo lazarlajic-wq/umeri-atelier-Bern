@@ -58,7 +58,7 @@ const Impressum = () => (
           <p>
             Telefon: <a href="tel:+41313114131" className="hover:text-primary transition-colors">031 311 41 31</a>
             <br />
-            E-Mail: [E-Mail einfügen]
+            E-Mail: <a href="mailto:info@umeri-schneiderei.ch" className="hover:text-primary transition-colors">info@umeri-schneiderei.ch</a>
           </p>
         </div>
         <div className="pt-4 text-xs text-muted-foreground/50">

@@ -52,6 +52,9 @@ const SiteFooter = () => (
             <p className="mt-4">
               <a href="tel:+41313114131" className="hover:text-primary transition-colors">031 311 41 31</a>
             </p>
+            <p>
+              <a href="mailto:info@umeri-schneiderei.ch" className="hover:text-primary transition-colors">info@umeri-schneiderei.ch</a>
+            </p>
           </address>
         </div>
       </div>
