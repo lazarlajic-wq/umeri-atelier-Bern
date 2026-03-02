@@ -25,8 +25,8 @@ const Navigation = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-background backdrop-blur-md ${
-        scrolled ? "border-b border-border shadow-lg shadow-background/20" : ""
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-[hsl(220,15%,6%)] ${
+        scrolled ? "border-b border-border shadow-lg" : ""
       }`}
     >
       <nav className="container mx-auto flex items-center justify-between px-6 py-3">
