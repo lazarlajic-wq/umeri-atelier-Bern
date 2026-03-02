@@ -25,15 +25,13 @@ const Navigation = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? "bg-background/95 backdrop-blur-md border-b border-border"
-          : "bg-transparent"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-background/95 backdrop-blur-md ${
+        scrolled ? "border-b border-border shadow-lg shadow-background/20" : ""
       }`}
     >
-      <nav className="container mx-auto flex items-center justify-between px-6 py-4">
+      <nav className="container mx-auto flex items-center justify-between px-6 py-3">
         <a href="#start" className="flex items-center gap-2">
-          <img src={logoUmeri} alt="Umeri Schneiderei Logo" className="h-10 w-auto" />
+          <img src={logoUmeri} alt="Umeri Schneiderei Logo" className="h-14 w-auto" />
         </a>
 
         <ul className="hidden lg:flex items-center gap-8">
