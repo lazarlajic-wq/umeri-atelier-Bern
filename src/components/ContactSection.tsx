@@ -174,7 +174,7 @@ const ContactSection = () => {
                   E-Mail
                 </h3>
                 <p className="text-muted-foreground text-sm">
-                  [E-Mail einfügen]
+                  <a href="mailto:info@umeri-schneiderei.ch" className="hover:text-primary transition-colors">info@umeri-schneiderei.ch</a>
                 </p>
               </div>
             </div>
